@@ -8,14 +8,13 @@ import { addExpense, removeExpense, editExpense } from './actions/expenses';
 import { setTextFilter, setStartDate, setEndDate, sortByAmount, sortByDate } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import 'normalize.css/normalize.css'; // make sure all browsers start from the same place
+import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
 
 const jsx = (
-    // store is from line 14
     <Provider store={store}> 
         <AppRouter /> 
     </Provider> 
