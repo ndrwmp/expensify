@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render total for one expense and pluralize correctly 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     totalling 
+    $1.95
+  </p>
+</div>
+`;
+
+exports[`should render total for two expenses and pluralize correctly 1`] = `
+<div>
+  <p>
+    Viewing 
+    2
+     
+    expenses
+     totalling 
+    $851.95
+  </p>
+</div>
+`;
