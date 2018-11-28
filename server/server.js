@@ -14,5 +14,5 @@ app.get("*", (req, res) => {
 
 // start server on heroku or port 3000 if not running on heroku
 app.listen(port, () => {
-    console.log("server is running");
+    console.log("server is running on port", port);
 });
