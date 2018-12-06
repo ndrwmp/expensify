@@ -7,6 +7,7 @@ exports[`should render expense list with expenses 1`] = `
     createdAt={0}
     description="gum"
     id="1"
+    key="1"
     note=""
   />
   <ExpenseListItem
@@ -14,6 +15,7 @@ exports[`should render expense list with expenses 1`] = `
     createdAt={-345600000}
     description="rent"
     id="2"
+    key="2"
     note=""
   />
   <ExpenseListItem
@@ -21,6 +23,7 @@ exports[`should render expense list with expenses 1`] = `
     createdAt={345600000}
     description="credit card"
     id="3"
+    key="3"
     note=""
   />
 </div>
