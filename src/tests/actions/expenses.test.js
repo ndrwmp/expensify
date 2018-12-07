@@ -42,7 +42,7 @@ test("should add expense to database and to store", (done) => {
                 ...expenseData
             }
         })
-
+        
         // check if correct data was stored in the database
         return database.ref(`expenses/${actions[0].expense.id}`).once('value');
     }).then((snapshot) => {
@@ -70,7 +70,7 @@ test("should add expense with defaults to database and to store", (done) => {
                 id: expect.any(String),
                 ...defaultExpenseData
             }
-        })
+        });
 
         // check if the default data was stored in the database
         return database.ref(`expenses/${actions[0].expense.id}`).once('value');
