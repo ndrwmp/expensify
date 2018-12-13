@@ -1,11 +1,14 @@
 .input-group {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: $m-size;
 
     @media (min-width: $desktop-breakpoint) {
         flex-direction: row;
         margin-bottom: $l-size;
+        width: 100%;
     }
 }
 
