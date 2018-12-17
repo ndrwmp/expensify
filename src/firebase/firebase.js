@@ -11,8 +11,10 @@ const config = {
 
 firebase.initializeApp(config);
 const database = firebase.database();
+const twitterAuthProvider = new firebase.auth.TwitterAuthProvider();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-export { firebase, googleAuthProvider, database as default };
+const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+export { firebase, googleAuthProvider, twitterAuthProvider, githubAuthProvider, database as default };
 
 
 // Firebase 101
