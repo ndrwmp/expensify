@@ -12,10 +12,6 @@ export const LoginPage = ({ startLoginWithGoogle, startLoginWithTwitter, startLo
             <button style={{background: "#464b5e"}} className="button button--login" onClick={startLoginWithTwitter}>Log in with Twitter</button>
             <button style={{background: "#364051"}} className="button button--login" onClick={startLoginWithGithub}>Log in with GitHub</button>
         </div>
-        {/* <LoginErrorModal 
-            showModal={}
-            onRequestClose={this.toggleModal}
-        /> */}
     </div>
 );
 
