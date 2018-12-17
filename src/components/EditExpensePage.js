@@ -2,15 +2,32 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 import ExpenseForm from './ExpenseForm';
+import ConfirmationModal from './ConfirmationModal';
 
-export class EditExpensePage extends React.Component { 
-    onSubmit = (expense) => {
+export class EditExpensePage extends React.Component {
+
+    constructor(props) {
+        super(props);
+      
+        this.state = {
+          showModal: false
+        };
+    }
+
+    toggleModal = () => {
+        this.setState({
+            showModal: !this.state.showModal
+        });
+    }
+    
+    onEditSubmit = (expense) => {
         this.props.startEditExpense(this.props.expense.id, expense);
         this.props.history.push('/');
     }
 
-    onClick = () => {
+    onRemoveSubmit = () => {
         this.props.startRemoveExpense({ id: this.props.expense.id });
+        this.toggleModal();
         this.props.history.push('/');
     }
 
@@ -24,13 +41,19 @@ export class EditExpensePage extends React.Component {
                 </div>
                 <div className="content-container">
                     <ExpenseForm
-                        onSubmit={this.onSubmit}
+                        onSubmit={this.onEditSubmit}
                         expense={this.props.expense}
                     />
                     <button
                         className="button button--secondary"
-                        onClick={this.onClick}
+                        onClick={this.toggleModal}
                     >Remove expense</button>
+                    <ConfirmationModal 
+                        showModal={this.state.showModal}
+                        onRequestClose={this.toggleModal}
+                        onSubmit={this.onRemoveSubmit}
+                        // ariaHideApp={false}
+                    />
                 </div>
             </div>
         );
