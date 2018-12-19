@@ -8,6 +8,7 @@ Made following Andrew Mead's React tutorial, covering:
 * Jest
 
 
-I added a few features I added on my own including:
+I added a few features I added on my own, including:
 
 * a modal to confirm the removal of an expense
+* logging in with GitHub and Twitter
